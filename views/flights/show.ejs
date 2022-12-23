@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Flight Dispatcher</title>
+</head>
+
+<body>
+    <header>
+        <h1>Show Page for <%= flight.name %></h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/flights">Flights Index</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Flight Attributes:</h2>
+            <ul>
+                <li>Name: <%= flight.name %></li>
+            </ul>
+        </section>
+        <section>
+            <a href="/flights/<%= flight._id %>/edit">Edit</a>
+        </section>        
+        <section>
+            <form action="/flights/<%= flight._id %>?_method=DELETE" method="POST">
+                <input type="submit" value="Delete Flight" />
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

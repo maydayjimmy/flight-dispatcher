@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Flight Dispatcher</title>
+</head>
+
+<body>
+    <header>
+        <h1>Flights</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/flights/new">Create a new Flight</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2>List of Flights</h2>
+    <ul>
+        <% for(let i = 0; i < flights.length; i++){ %>
+        <li>
+            <a href="/flights/<%= flights[i]._id %>"><%= flights[i].name %></a>
+        </li>
+        <% } %>
+    </ul>
+</body>
+
+</html>
