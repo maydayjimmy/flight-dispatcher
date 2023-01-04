@@ -23,7 +23,7 @@
     <main>
         <h2>Flight Attributes:</h2>
         <form action="/flights/<%= flight._id %>?_method=PUT" method="POST">
-            <input type="text" name="name" value="<%= flight.name %>" /><br />
+            <input type="text" name="name" value="<%= flight.number %>" /><br />
             <input type="submit" value="Update Flight" />
         </form>
     </main>

@@ -21,13 +21,38 @@
     </header>
 
     <h2>List of Flights</h2>
-    <ul>
-        <% for(let i = 0; i < flights.length; i++){ %>
-        <li>
-            <a href="/flights/<%= flights[i]._id %>"><%= flights[i].number %></a>
-        </li>
-        <% } %>
-    </ul>
+    <table class = "times">
+
+        <thead>
+            <tr>
+                <th id = "title">ETD</th>
+                <th id = "title">AIRCRAFT</th>
+                <th id = "title">REG</th>
+                <th id = "title">DEP</th>
+                <th id = "title">DEST</th>
+                <th id = "title">PIC</th>
+                <th id = "title">FO</th>
+                <th id = "title">STATUS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let i = 0; i < flights.length; i++){ %>
+                <tr>
+                    <td id = "etd"><a href="/flights/<%= flights[i]._id %>"><%= flights[i].ETD %></a></td>
+                    <td id = "aircraft"><a href="/flights/<%= flights[i]._id %>"><%= flights[i].aircraft %></a></td>
+                    <td id = "reg"><a href="/flights/<%= flights[i]._id %>"><%= flights[i].reg %></a></td>
+                    <td id = "dep"><a href="/flights/<%= flights[i]._id %>"><%= flights[i].dep %></a></td>
+                    <td id = "dest"><a href="/flights/<%= flights[i]._id %>"><%= flights[i].dest %></a></td>
+                    <td id = "pic"><a href="/flights/<%= flights[i]._id %>"><%= flights[i].PIC %></a></td>
+                    <td id = "fo"><a href="/flights/<%= flights[i]._id %>"><%= flights[i].FO %></a></td>
+                    <td id = "status"><a href="/flights/<%= flights[i]._id %>"><%= flights[i].status %></a></td>
+                </tr>
+            <% } %>
+        </tbody>
+        <tfoot>
+
+        </tfoot>
+    </table>
 </body>
 
 </html>

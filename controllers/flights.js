@@ -67,14 +67,14 @@ router.post('/', (req, res) => {
     });
 });
 
-// Get edit flight page (E)
-router.get('/:id/edit', (req, res) => {
-    Flight.findById(req.params.id, (err, foundFlight) => {
-        res.render('flights/edit.ejs', {
-            flight: foundFlight
-        });
-    });
-});
+// // Get edit flight page (E)
+// router.get('/:id/edit', (req, res) => {
+//     Flight.findById(req.params.id, (err, foundFlight) => {
+//         res.render('flights/edit.ejs', {
+//             flight: foundFlight
+//         });
+//     });
+// });
 
 // Get flight show page (S)
 router.get('/:id', (req, res) => {

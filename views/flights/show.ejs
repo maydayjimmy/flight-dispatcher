@@ -8,7 +8,7 @@
 
 <body>
     <header>
-        <h1>Details for Flight Plan<%= flight.number %></h1>
+        <h1>Details for Flight Plan <%= flight.number %></h1>
         <nav>
             <ul>
                 <li>
@@ -22,14 +22,38 @@
     </header>
     <main>
         <section>
-            <h2>Flight Attributes:</h2>
-            <ul>
-                <li>Number: <%= flight.number %></li>
-            </ul>
+                <h2>Route Details:</h2>
+
+                    <form action="/flights/<%= flight._id %>?_method=PUT" method="POST">
+
+                        <h4>Plan Number: </h4><input type="text" name="number" value="<%= flight.number %>" /><br />
+
+                        <h4>ETD: </h4><input type="text" name="etd" value="<%= flight.ETD %>" /><br />
+
+                        <h4>Aircraft: </h4><input type="text" name="aircraft" value="<%= flight.aircraft %>" /><br />
+
+                        <h4>Registration: </h4><input type="text" name="reg" value="<%= flight.reg %>" /><br />
+
+                        <h4>Status: </h4><input type="text" name="status" value="<%= flight.status %>" /><br />
+
+                        <h4>Departure: </h4><input type="text" name="dep" value="<%= flight.dep %>" /><br />
+
+                        <h4>Destination: </h4><input type="text" name="dest" value="<%= flight.dest %>" /><br />
+
+                        <h4>Max Altitude: </h4><input type="text" name="maxAlt" value="<%= flight.maxAlt %>" /><br />
+
+                        <h4>Route Waypoints: </h4><input type="text" name="route" value="<%= flight.route %>" /><br />
+
+                <h2>Aircrew: </h2>
+
+                        <h4>Pilot in Command: </h4><input type="text" name="PIC" value="<%= flight.PIC %>" /><br />
+
+                        <h4>First Officer: </h4><input type="text" name="FO" value="<%= flight.FO %>" /><br />
+
+                        <input type="submit" value="Save Flight" />
+                    </form>
         </section>
-        <section>
-            <a href="/flights/<%= flight._id %>/edit">Edit</a>
-        </section>        
+
         <section>
             <form action="/flights/<%= flight._id %>?_method=DELETE" method="POST">
                 <input type="submit" value="Delete Flight" />

@@ -2,7 +2,9 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const flightSchema = new Schema({
+    ETD: { type: Number },
     number: { type: Number},
+    reg: { type: String},
     aircraft: { type: String},
     dep: { type: String},
     dest: { type: String},
@@ -10,6 +12,7 @@ const flightSchema = new Schema({
     route: { type: String},
     PIC: { type: String},
     FO: { type: String},
+    status: { type: String},
 },
 {
     timestamps: true
