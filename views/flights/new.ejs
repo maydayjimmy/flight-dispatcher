@@ -1,50 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link type="text/css" rel="stylesheet" href="../public/show.css" />
     <meta charset="utf-8">
     <title>Flight Dispatcher</title>
 </head>
 
 <body>
     <header>
-        <h1>Create an Flight</h1>
-        <nav>
-            <a href="/flights">Back to List</a>
-        </nav>
+        <a href="/" class="brand"><img src="../public/flynow.png" width= "250px" height="70ox" alt="brand" /></a>
+    
+        <a href="https://www.netjets.com/en-us/" class="netjets"><img src="../public/netjets.png" width= "200px" height="70px" alt="netjets" /></a>
+    
+        <a class = "backbtn" href="/flights" >Back to Dispatch</a>
     </header>
+
     <main>
         <section>
-            <h2>Route Details:</h2>
-                <form action="/flights" method="POST">
+                    <div class = "details">
+                    <h2>Route Details:</h2>
 
-                    <h4>Plan Number: </h4><input type="text" name="number"/><br />
+                    <form action="/flights" method="POST">
 
-                    <h4>ETD: </h4><input type="text" name="etd"/><br />
+                        <div id = "info0">
+                            <div id= "inline">
+                                <h4>Plan Number: </h4><input type="text" name="number"/>
+                            </div></br>
+                        </div>
 
-                    <h4>Aircraft: </h4><input type="text" name="aircraft"/><br />
+                        <div id = "info1">
+                            <div id= "inline">
+                                <h4>ETD: </h4><input type="text" name="ETD"/><br />
+                            </div>
 
-                    <h4>Registration: </h4><input type="text" name="reg"/><br />
+                            <div id= "inline">
+                                <h4>Aircraft: </h4><input type="text" name="aircraft"/><br />
+                            </div>
 
-                    <div id= "cleared">
-                        <h4>Flight Cleared</h4><input id="check" type="checkbox" name="status" />
-                    </div>
+                            <div id= "inline">
+                                <h4>Registration: </h4><input type="text" name="reg"/><br />
+                            </div>
 
-                    <h4>Departure: </h4><input type="text" name="dep"/><br />
+                            <div id= "cleared">
+                                <h4>Flight Cleared</h4><input id="check" type="checkbox" name="status"/>
+                                <br />
+                            </div>
+                        </div>
 
-                    <h4>Destination: </h4><input type="text" name="dest"/><br />
+                        <div id = "info2">
+                            <div id= "inline">
+                                <h4>Departure: </h4><input type="text" name="dep"/><br />
+                            </div>
 
-                    <h4>Max Altitude: </h4><input type="text" name="maxAlt"/><br />
+                            <div id= "inline">
+                                <h4>Destination: </h4><input type="text" name="dest"><br />
+                            </div>
+                            </br>
+                        </div>
 
-                    <h4>Route Waypoints: </h4><input type="text" name="route"/><br />
+                        <div id = "info3">
+                            <div id= "inline">
+                                <h4>Max Altitude: </h4><input type="text" name="maxAlt"/><br />
+                            </div>
 
-            <h2>Aircrew: </h2>
+                            <div id= "inline">
+                                <h4>Route Waypoints: </h4><textarea name="route" cols="40" rows="5"></textarea><br />
+                            </div>
+                        </div>
+                        </div>
 
-                    <h4>Pilot in Command: </h4><input type="text" name="PIC"/><br />
 
-                    <h4>First Officer: </h4><input type="text" name="FO"/><br />
+                        <div class = "aircrew">
+                        <h2>Aircrew: </h2>
 
-                    <input type="submit" value="Create Flight" />
-                </form>
-    </section>
+                        <div id= "inline">
+                            <h4>Pilot in Command: </h4><input type="text" name="PIC"/>
+                        </div>
+
+                        <div id= "inline">
+                            <h4>First Officer: </h4><input type="text" name="FO" />
+                        </div>
+                        </div>
+
+                        <input id = "savebtn" type="submit" value="Create Flight" />
+                    </form>
+        </section>
+
     </main>
 </body>
