@@ -1,9 +1,8 @@
 body {
-  background-color: whitesmoke;
+  background-image: url(background2.jpg);
 }
 
 header {
-  background-color: whitesmoke;
   display: flex;
   justify-content: space-between;
   align-items: center;
