@@ -43,7 +43,11 @@
                     <td id = "dest"><%= flights[i].dest %></td>
                     <td id = "pic"><%= flights[i].PIC %></td>
                     <td id = "fo"><%= flights[i].FO %></td>
-                    <td id = "status"><%= flights[i].status %></td>
+
+                    <!-- Checks to see if status = true, then show "cleared" -->
+                    <% if( flights[i].status === true){ %> <td style= "color: green;" id = "status">CLEARED</td>
+                    <% } else { %> <td style= "color: red;" id = "status">NOT CLEARED</td> <% } %>
+                        
                     <td id = "view">
                         <form action="/flights/<%= flights[i]._id %>">
                             <input class = "viewbtn" type="submit" value="View Flight" />

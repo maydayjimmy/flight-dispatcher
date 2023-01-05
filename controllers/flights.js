@@ -55,6 +55,16 @@ router.delete('/:id', (req, res) => {
 
 // Put flight update (U)
 router.put('/:id', (req, res) => {
+    
+    // Handle checkbox (if on, then true)
+    if (req.body.status === "on") {
+        //if checked, req.body.status is set to 'on'
+        req.body.status = true
+        } else {
+        //if not checked, req.body.status is undefined
+        req.body.status = false
+    }
+
     Flight.findByIdAndUpdate(req.params.id, req.body, () => {
         res.redirect('/flights');
     });
@@ -62,6 +72,16 @@ router.put('/:id', (req, res) => {
 
 // Post create flight (C)
 router.post('/', (req, res) => {
+
+    // Handle checkbox (if on, then true)
+    if (req.body.status === "on") {
+        //if checked, req.body.status is set to 'on'
+        req.body.status = true
+        } else {
+        //if not checked, req.body.status is undefined
+        req.body.status = false
+    }
+
     Flight.create(req.body, (err, createdFlight) => {
         res.redirect('/flights');
     });

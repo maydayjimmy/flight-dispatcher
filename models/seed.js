@@ -10,7 +10,7 @@ module.exports = [
         route: 'BLZZR5 BLZZR BAF MOBBS SAGES V489 COATE',
         PIC: 'John Dispatch',
         FO: 'Jason Dispatch',
-        status: 'FILED',
+        status: true,
     },
     {
         ETD: '2300',
@@ -23,7 +23,7 @@ module.exports = [
         route: 'BLZZR5 BLZZR BAF MOBBS SAGES V489 COATE',
         PIC: 'John Dispatch',
         FO: 'Jason Dispatch',
-        status: 'FILED',
+        status: false,
     },
     {
         ETD: '2300',
@@ -36,7 +36,7 @@ module.exports = [
         route: 'BLZZR5 BLZZR BAF MOBBS SAGES V489 COATE',
         PIC: 'John Dispatch',
         FO: 'Jason Dispatch',
-        status: 'FILED',
+        status: false,
     },
     {
         ETD: '2300',
@@ -49,7 +49,7 @@ module.exports = [
         route: 'BLZZR5 BLZZR BAF MOBBS SAGES V489 COATE',
         PIC: 'John Dispatch',
         FO: 'Jason Dispatch',
-        status: 'FILED',
+        status: true,
     },
     {
         ETD: '2300',
@@ -62,7 +62,7 @@ module.exports = [
         route: 'BLZZR5 BLZZR BAF MOBBS SAGES V489 COATE',
         PIC: 'John Dispatch',
         FO: 'Jason Dispatch',
-        status: 'FILED',
+        status: true,
     },
     {
         ETD: '2300',
@@ -75,7 +75,7 @@ module.exports = [
         route: 'BLZZR5 BLZZR BAF MOBBS SAGES V489 COATE',
         PIC: 'John Dispatch',
         FO: 'Jason Dispatch',
-        status: 'FILED',
+        status: true,
     },
     {
         ETD: '2300',
@@ -88,6 +88,6 @@ module.exports = [
         route: 'BLZZR5 BLZZR BAF MOBBS SAGES V489 COATE',
         PIC: 'John Dispatch',
         FO: 'Jason Dispatch',
-        status: 'FILED',
+        status: false,
     },
 ]

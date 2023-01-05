@@ -32,6 +32,14 @@ form{
     column-gap: 100px;
 }
 
+#cleared{
+    display: inline-flex;
+}
+
+#check{
+    transform: translate(10px, 0px);
+}
+
 #savebtn{
     display: flex;
     justify-content: center;

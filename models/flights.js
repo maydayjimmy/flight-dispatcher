@@ -12,7 +12,7 @@ const flightSchema = new Schema({
     route: { type: String},
     PIC: { type: String},
     FO: { type: String},
-    status: { type: String},
+    status: { type: Boolean},
 },
 {
     timestamps: true
