@@ -20,11 +20,15 @@ as well as whether or not the flight plan has been cleared.
 ![screenshot1](pics/ss2.png)
 
 ### Getting Started
-Enter dispatch portal on the flight dispatcher homepage.
+From the landing page, enter the dispatch portal on the flight dispatcher homepage.
 
-your flight's airline (IATA code) and flight number in the search box and click "Check Flight Status" to view flight details.
+Input seed data to database (if desired) by navigating to /flights/seed.
 
-[Click Here](https://maydayjimmy.github.io/Flight-Tracker-1/) to go to the deployed app
+To create a new flight plan, click the button in the top right corner and input corresponding information.
+
+To view/edit existing flight plans, click the "view flight" button.
+
+[Click Here](https://flightdispatcher.herokuapp.com/) to go to the deployed app
 
 ### Future Enhancements
 * Connecting to a flight planning API for basic airport information and weather
