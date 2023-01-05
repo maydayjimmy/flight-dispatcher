@@ -13,7 +13,7 @@
 
     <a href="https://www.netjets.com/en-us/" class="netjets"><img src="../public/netjets.png" width= "200px" height="70px" alt="netjets" /></a>
 
-        <a href="/flights/new" class="newbtn">New Flight</a>
+        <a class = "newbtn" href="/flights/new" class="newbtn">Create New Flight Plan</a>
 </header>
 
 <div class = table>
@@ -46,7 +46,7 @@
                     <td id = "status"><%= flights[i].status %></td>
                     <td id = "view">
                         <form action="/flights/<%= flights[i]._id %>">
-                            <input type="submit" value="View Flight" />
+                            <input class = "viewbtn" type="submit" value="View Flight" />
                         </form>
                     </td>
                 </tr>
