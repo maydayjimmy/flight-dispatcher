@@ -35,7 +35,7 @@ db.on('disconnected', () => console.log('mongod disconnected'));
 // Middleware------------------------------------------
 
 // Require CSS
-// app.use("/public", express.static(__dirname + "/views/public"));
+app.use("/public", express.static(__dirname + "/views/public"));
 
 //use public folder for static assets
 app.use(express.static('public'));

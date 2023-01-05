@@ -1,31 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link type="text/css" rel="stylesheet" href="../public/index.css" />
     <meta charset="utf-8">
     <title>Flight Dispatcher</title>
 </head>
 
 <body>
-    <header>
-        <h1>Flights</h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a href="/flights/new">Create a new Flight</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
 
-    <h2>List of Flights</h2>
-    <table class = "times">
+<header>
+    <a href="/" class="brand"><img src="../public/flynow.png" width= "250px" height="70ox" alt="brand" /></a>
 
+    <a href="https://www.netjets.com/en-us/" class="netjets"><img src="../public/netjets.png" width= "200px" height="70px" alt="netjets" /></a>
+
+        <a href="/flights/new" class="newbtn">New Flight</a>
+</header>
+
+<div class = table>
+    <table class = "flightplans">
         <thead>
             <tr>
                 <th id = "title">ETD</th>
+                <th id = "title">NUM</th>
                 <th id = "title">AIRCRAFT</th>
                 <th id = "title">REG</th>
                 <th id = "title">DEP</th>
@@ -33,19 +29,26 @@
                 <th id = "title">PIC</th>
                 <th id = "title">FO</th>
                 <th id = "title">STATUS</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
             <% for(let i = 0; i < flights.length; i++){ %>
                 <tr>
-                    <td id = "etd"><a href="/flights/<%= flights[i]._id %>"><%= flights[i].ETD %></a></td>
-                    <td id = "aircraft"><a href="/flights/<%= flights[i]._id %>"><%= flights[i].aircraft %></a></td>
-                    <td id = "reg"><a href="/flights/<%= flights[i]._id %>"><%= flights[i].reg %></a></td>
-                    <td id = "dep"><a href="/flights/<%= flights[i]._id %>"><%= flights[i].dep %></a></td>
-                    <td id = "dest"><a href="/flights/<%= flights[i]._id %>"><%= flights[i].dest %></a></td>
-                    <td id = "pic"><a href="/flights/<%= flights[i]._id %>"><%= flights[i].PIC %></a></td>
-                    <td id = "fo"><a href="/flights/<%= flights[i]._id %>"><%= flights[i].FO %></a></td>
-                    <td id = "status"><a href="/flights/<%= flights[i]._id %>"><%= flights[i].status %></a></td>
+                    <td id = "etd"><%= flights[i].ETD %></td>
+                    <td id = "num"><%= flights[i].number %></td>
+                    <td id = "aircraft"><%= flights[i].aircraft %></td>
+                    <td id = "reg"><%= flights[i].reg %></td>
+                    <td id = "dep"><%= flights[i].dep %></td>
+                    <td id = "dest"><%= flights[i].dest %></td>
+                    <td id = "pic"><%= flights[i].PIC %></td>
+                    <td id = "fo"><%= flights[i].FO %></td>
+                    <td id = "status"><%= flights[i].status %></td>
+                    <td id = "view">
+                        <form action="/flights/<%= flights[i]._id %>">
+                            <input type="submit" value="View Flight" />
+                        </form>
+                    </td>
                 </tr>
             <% } %>
         </tbody>
@@ -53,6 +56,7 @@
 
         </tfoot>
     </table>
+</div>
 </body>
 
 </html>

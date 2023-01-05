@@ -1,0 +1,38 @@
+body {
+  background-color: white;
+}
+
+header {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+header .newbtn {
+  border:2px solid black;
+  padding: 5px 5px; 
+  line-height: 20px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+div.table {
+    background-color:rgb(35, 38, 42);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+table {
+  color: white;
+  width: 100%;
+  height: 400px;
+  text-align: center;
+}
+
+#title{
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+/*  ------------------------------------------------------------------------- */
